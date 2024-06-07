@@ -1,0 +1,30 @@
+dotnet ef migrations add InitialCreate
+dotnet ef database update
+
+
+dotnet ef migrations add InitialCreate
+dotnet ef database update
+
+
+
+dotnet add package Microsoft.EntityFrameworkCore
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+dotnet add package Microsoft.EntityFrameworkCore.Tools
+
+
+
+
+npm install -g @angular/cli
+ng new task-manager
+cd task-manager
+ng generate service services/task
+ng generate component components/task-list
+ng generate component components/task-form
+
+
+ng serve
+
+
+
+
+ 

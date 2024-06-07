@@ -1,0 +1,21 @@
+<h2>{{ isEditMode ? 'Edit Task' : 'Add New Task' }}</h2>
+<form (ngSubmit)="saveTask()">
+  <div>
+    <label for="subject">Subject:</label>
+    <input id="subject" [(ngModel)]="task.subject" name="subject" required />
+  </div>
+  <div>
+    <label for="description">Description:</label>
+    <input id="description" [(ngModel)]="task.description" name="description" />
+  </div>
+  <div>
+    <label for="start">Start:</label>
+    <input id="start" [(ngModel)]="task.start" name="start" type="datetime-local" required />
+  </div>
+  <div>
+    <label for="end">End:</label>
+    <input id="end" [(ngModel)]="task.end" name="end" type="datetime-local" required />
+  </div>
+  <button type="submit">{{ isEditMode ? 'Update' : 'Create' }}</button>
+</form>
+<a routerLink="/task-list">Back to Task List</a>
